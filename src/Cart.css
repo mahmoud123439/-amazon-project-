@@ -1,0 +1,72 @@
+.product_RemoveBtn{
+    background-color: brown;
+    padding: 10px;
+    
+    border-radius: 5px;
+    border: 0px;
+    padding-left:20px;
+    padding-right:20px;
+    margin-top:20px;
+    cursor: pointer;
+    color:#fff;
+}
+
+
+.Products__Btns{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.Product__IncBtn
+,.Product__DecBtn{
+    border-radius: 50%;
+    padding-left:15px;
+    padding-right:15px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.Product__IncBtn{
+    color:greenyellow;
+    font-size: 30px;
+}
+
+
+.Product__DecBtn{
+    color:red;
+    font-size: 30px;
+}
+
+.products{
+    padding-top:100px;
+}
+
+.product_remvBtn{
+    background-color: red !important;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:20px;
+    padding-right:20px;
+    color:#fff;
+    border-radius: 5px;
+
+}
+
+.product_remvBtn:hover{
+    cursor: pointer;
+}
+
+.products{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.products__Items > p{
+    color:#F3A847;
+    font-size: 20px;
+    font-weight: bold;
+}

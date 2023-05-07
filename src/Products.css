@@ -1,0 +1,45 @@
+.products{
+    margin-top:50px;
+}
+
+.products__Items{
+    display: flex;
+    justify-content: space-between;
+    margin-left:250px;
+    flex-wrap: wrap;
+    /* justify-content: space-between;
+    align-items: center;
+    text-align: center; */
+}
+
+.items{
+  margin-bottom: 10px;
+  /* border: 1px solid #ccc; */
+  /* display: flex; */
+  flex: 1 0 31%; /* explanation below */
+
+}
+
+
+.product__Img{
+    width:40%;
+}
+
+.product__Sponser{
+    width:50%;
+    text-align: left;
+}
+
+
+
+.product_addBtn{
+    background-color: #ff9900;
+    padding: 10px;
+    
+    border-radius: 5px;
+    border: 0px;
+    padding-left:20px;
+    padding-right:20px;
+    margin-top:20px;
+    cursor: pointer;
+}

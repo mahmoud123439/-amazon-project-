@@ -1,0 +1,85 @@
+import { useSelector, useDispatch } from 'react-redux/es/exports';
+import './Cart.css';
+
+const Cart = ()=>{
+
+    const cart = useSelector(state => state);
+    const dispatch = useDispatch();
+    let AllData =   cart.map((items)=>{
+
+        
+        return(
+            <div className='items' key={items.id}>
+                    <img src={items.image} className="product__Img" /> 
+
+<div className="product__Sponser">
+    <p>{items.title}</p>
+    <a href="">{items.description.substring(0, 100)}</a>
+    <p>{items.category}</p>
+    <p>{items.rating.rate}</p>
+    <p>{Math.ceil(items.rating.rate) == 1 ? '⭐': Math.ceil(items.rating.rate) == 2 ? '⭐⭐' :
+    Math.ceil(items.rating.rate) == 3 ? '⭐⭐⭐' :
+    Math.ceil(items.rating.rate) == 4 ? '⭐⭐⭐⭐':
+    Math.ceil(items.rating.rate) == 5 ? '⭐⭐⭐⭐⭐' : '✩✩✩✩✩'
+    }</p>
+    <p>{items.price}$</p>
+    <p>Exclusive to Amazon</p>
+</div>
+
+    <div className='Products__Btns'>
+<div>
+<button className="product_RemoveBtn" onClick={()=>dispatch({type: "Remove Cart", payload: items})}>Remove Cart</button>
+
+</div>
+<button className='Product__IncBtn' onClick={()=>dispatch({type: "Increment", payload: items})}>+</button>
+{items.quantity}
+
+<button className='Product__DecBtn' onClick={()=>dispatch({type: "Decrement"})}>-</button>
+    </div>
+
+
+                    </div>
+        )
+    })
+
+    return ( 
+        <div className="products" style={{marginTop:"100px"}}>
+                    
+                    
+                    <div className='products__Items'>
+
+
+                        
+
+                    
+
+
+
+                {AllData.length == 0 ? 'No Data Into Cart' : AllData}
+
+                   
+                   
+
+
+
+
+                    
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+        </div>
+     );
+}
+
+export default Cart;
